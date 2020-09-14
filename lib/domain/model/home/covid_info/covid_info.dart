@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:tugas_prakerja/domain/home/value_req/value_request.dart';
+import 'package:tugas_prakerja/domain/model/home/value_req/value_request.dart';
 
 part 'covid_info.freezed.dart';
 part 'covid_info.g.dart';
