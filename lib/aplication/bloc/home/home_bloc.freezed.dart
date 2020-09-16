@@ -364,10 +364,8 @@ class _$HomeStateTearOff {
 
 // ignore: unused_element
   _HomeDataOption homeDataOption(
-      {@required
-          bool onloading,
-      @required
-          Option<Future<Either<String, CovidInfoResponse>>> dataCovid19}) {
+      {@required bool onloading,
+      @required Option<Either<String, CovidInfoResponse>> dataCovid19}) {
     return _HomeDataOption(
       onloading: onloading,
       dataCovid19: dataCovid19,
@@ -384,13 +382,13 @@ mixin _$HomeState {
     @required Result initial(),
     @required
         Result homeDataOption(bool onloading,
-            Option<Future<Either<String, CovidInfoResponse>>> dataCovid19),
+            Option<Either<String, CovidInfoResponse>> dataCovid19),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result homeDataOption(bool onloading,
-        Option<Future<Either<String, CovidInfoResponse>>> dataCovid19),
+    Result homeDataOption(
+        bool onloading, Option<Either<String, CovidInfoResponse>> dataCovid19),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -455,7 +453,7 @@ class _$_Initial implements _Initial {
     @required Result initial(),
     @required
         Result homeDataOption(bool onloading,
-            Option<Future<Either<String, CovidInfoResponse>>> dataCovid19),
+            Option<Either<String, CovidInfoResponse>> dataCovid19),
   }) {
     assert(initial != null);
     assert(homeDataOption != null);
@@ -466,8 +464,8 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result homeDataOption(bool onloading,
-        Option<Future<Either<String, CovidInfoResponse>>> dataCovid19),
+    Result homeDataOption(
+        bool onloading, Option<Either<String, CovidInfoResponse>> dataCovid19),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -512,8 +510,7 @@ abstract class _$HomeDataOptionCopyWith<$Res> {
           _HomeDataOption value, $Res Function(_HomeDataOption) then) =
       __$HomeDataOptionCopyWithImpl<$Res>;
   $Res call(
-      {bool onloading,
-      Option<Future<Either<String, CovidInfoResponse>>> dataCovid19});
+      {bool onloading, Option<Either<String, CovidInfoResponse>> dataCovid19});
 }
 
 class __$HomeDataOptionCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
@@ -534,7 +531,7 @@ class __$HomeDataOptionCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
       onloading: onloading == freezed ? _value.onloading : onloading as bool,
       dataCovid19: dataCovid19 == freezed
           ? _value.dataCovid19
-          : dataCovid19 as Option<Future<Either<String, CovidInfoResponse>>>,
+          : dataCovid19 as Option<Either<String, CovidInfoResponse>>,
     ));
   }
 }
@@ -548,7 +545,7 @@ class _$_HomeDataOption implements _HomeDataOption {
   @override
   final bool onloading;
   @override
-  final Option<Future<Either<String, CovidInfoResponse>>> dataCovid19;
+  final Option<Either<String, CovidInfoResponse>> dataCovid19;
 
   @override
   String toString() {
@@ -583,7 +580,7 @@ class _$_HomeDataOption implements _HomeDataOption {
     @required Result initial(),
     @required
         Result homeDataOption(bool onloading,
-            Option<Future<Either<String, CovidInfoResponse>>> dataCovid19),
+            Option<Either<String, CovidInfoResponse>> dataCovid19),
   }) {
     assert(initial != null);
     assert(homeDataOption != null);
@@ -594,8 +591,8 @@ class _$_HomeDataOption implements _HomeDataOption {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result homeDataOption(bool onloading,
-        Option<Future<Either<String, CovidInfoResponse>>> dataCovid19),
+    Result homeDataOption(
+        bool onloading, Option<Either<String, CovidInfoResponse>> dataCovid19),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -633,13 +630,11 @@ class _$_HomeDataOption implements _HomeDataOption {
 
 abstract class _HomeDataOption implements HomeState {
   const factory _HomeDataOption(
-          {@required
-              bool onloading,
-          @required
-              Option<Future<Either<String, CovidInfoResponse>>> dataCovid19}) =
+          {@required bool onloading,
+          @required Option<Either<String, CovidInfoResponse>> dataCovid19}) =
       _$_HomeDataOption;
 
   bool get onloading;
-  Option<Future<Either<String, CovidInfoResponse>>> get dataCovid19;
+  Option<Either<String, CovidInfoResponse>> get dataCovid19;
   _$HomeDataOptionCopyWith<_HomeDataOption> get copyWith;
 }
