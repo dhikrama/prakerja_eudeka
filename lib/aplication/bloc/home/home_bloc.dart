@@ -24,7 +24,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     yield* event.map(
         getDataConfirmed: (e) async* {
           yield HomeState.homeDataOption(onloading: true, dataCovid19: none());
-          final _result = _interface.getDataInfoCovidAsync();
+          final _result = await _interface.getDataInfoCovidAsync();
           yield HomeState.homeDataOption(
               onloading: false, dataCovid19: some(_result));
         },
