@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:tugas_prakerja/domain/model/home/covid_info/covid_info.dart';
-import 'package:tugas_prakerja/domain/model/home/home_interface.dart';
+import 'package:tugas_prakerja/domain/model/model_interface.dart';
 
-@Injectable(as: HomeInterface)
-class UrlData extends HomeInterface {
+@Injectable(as: ModelInterface)
+class UrlData extends ModelInterface {
   Response _response;
   Dio dio;
   UrlData(this.dio);

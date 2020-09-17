@@ -6,7 +6,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:tugas_prakerja/domain/model/home/covid_info/covid_info.dart';
 
-import '../../../domain/model/home/home_interface.dart';
+import '../../../domain/model/model_interface.dart';
 
 part 'home_event.dart';
 part 'home_state.dart';
@@ -15,7 +15,7 @@ part 'home_bloc.freezed.dart';
 @injectable
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc(this._interface) : super(_Initial());
-  HomeInterface _interface;
+  ModelInterface _interface;
 
   @override
   Stream<HomeState> mapEventToState(
